@@ -1,7 +1,7 @@
 {
   "name": "redpayments/magento2",
   "description": "Redpayments Module for Magento 2",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "require": {
     "ext-json": "*"
   },
