@@ -332,8 +332,8 @@ class General extends AbstractHelper
      */
     public function getNotifyUrl()
     {
-        //return $this->urlBuilder->getUrl(self::ROUTER_NAME . '/checkout/notify');
-        return 'http://huifng.vaiwan.com/redpayments/checkout/notify/';
+        return $this->urlBuilder->getUrl(self::ROUTER_NAME . '/checkout/notify');
+        //return 'http://huifng.vaiwan.com/redpayments/checkout/notify/';
     }
 
     /**
