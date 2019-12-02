@@ -1,7 +1,7 @@
 {
   "name": "redpayments/magento2",
   "description": "Redpayments Module for Magento 2",
-  "version": "v1.0.0",
+  "version": "1.0.1",
   "require": {
     "ext-json": "*"
   },
@@ -15,7 +15,8 @@
       "registration.php"
     ],
     "psr-4": {
-      "redpayments\\magento2\\": ""
+      "Redpayments\\Magento2\\": ""
     }
-  }
+  },
+  "minimum-stability": "dev"
 }

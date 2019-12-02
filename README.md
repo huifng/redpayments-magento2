@@ -41,7 +41,7 @@ After the installation. Go to your Magento® admin portal, to 'Stores' > 'Config
 # About Redpayments
 Redpayments is a leading Australian cross-border payment platform, dedicated to providing simple, secure and fast payment solutions that users can process via mobile devices for any scenario.
 
-You can send email to admin@redpayments.com.au or call us at +61 2967 6668 to open your redpayments account.
+You can send us email at admin@redpayments.com.au to get more information.
 
 ## FEATURES
 - Expand your reach and attract more Chinese customers and marketing capabilities. Consumers pay in RMB and merchants can settle in australia dollars.
