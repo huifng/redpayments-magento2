@@ -83,7 +83,7 @@ class Redirect extends Controller
                         }
                         $wechatWebUrl = $wechatWebUrl . '?mchNo=' . $this->redpayPayHelper->getMchNo();
                         $wechatWebUrl = $wechatWebUrl . '&mchOrderNo=' . $order->getId();
-                        $wechatWebUrl = $wechatWebUrl. '&qrCode=' . \urlencode($redirectUrl);
+                        $wechatWebUrl = $wechatWebUrl . '&qrCode=' . \urlencode($redirectUrl);
                         $response->setRedirect($wechatWebUrl);
                     }
                 }else{
