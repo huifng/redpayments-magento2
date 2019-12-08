@@ -46,6 +46,7 @@ class General extends AbstractHelper
     const REDPAY_CURRENCY = 'payment/' . self::MODULE_CODE . '/currency';
     const REDPAY_DEBUG = 'payment/' . self::MODULE_CODE . '/debug';
     const REDPAY_FEE = 'payment/' . self::MODULE_CODE . '/fee';
+    const REDPAY_IS_DEV = 'payment/' . self::MODULE_CODE . '/is_dev';
     const REDPAY_AUTO_EMAIL = 'payment/' . self::MODULE_CODE . '/auto_send_email';
     const REDPAY_AUTO_INVOICE = 'payment/' . self::MODULE_CODE . '/auto_invoice';
 
@@ -277,10 +278,11 @@ class General extends AbstractHelper
     public function getGatewayInstance()
     {
         if(self::$gatewayInstance === null){
+            $isDev = $this->getIsDev();
             $mchNo = $this->getMchNo();
             $storeNo = $this->getStoreNo();
             $apiKey = $this->getApiKey();
-            self::$gatewayInstance = new Gateway($mchNo, $storeNo, $apiKey, new Request(new Cryptography($apiKey)));
+            self::$gatewayInstance = new Gateway($isDev, $mchNo, $storeNo, $apiKey, new Request(new Cryptography($apiKey)));
         }
         return self::$gatewayInstance;
     }
@@ -362,6 +364,11 @@ class General extends AbstractHelper
     {
         $fee = $this->getStoreConfig(self::REDPAY_FEE);
         return $fee < 0 ? 0 : $fee;
+    }
+
+    public function getIsDev()
+    {
+        return (bool)$this->getStoreConfig(self::REDPAY_IS_DEV);
     }
 
     public function getAuthSendEmail()

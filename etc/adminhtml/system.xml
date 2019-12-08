@@ -52,8 +52,12 @@
                     <label>Currency</label>
                     <source_model>Redpayments\Magento2\Model\Config\Source\Currency</source_model>
                 </field>
-                <field id="fee" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="fee" translate="label" type="text" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Fee(%)</label>
+                </field>
+                <field id="is_dev" translate="label" type="select" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Development Env</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
                 <!-- <field id="auto_send_email" translate="label" type="select" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="0">
                     <label>Auto Send Email</label>

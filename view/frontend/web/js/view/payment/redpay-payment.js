@@ -14,8 +14,6 @@ define(
         rendererList
     ) {
         'use strict';
-        console.log("redpayemnts ===============");
-        console.log(window.checkoutConfig);
 
         if (window.checkoutConfig.payment.redpayments_alipay.isActive) {
             rendererList.push(

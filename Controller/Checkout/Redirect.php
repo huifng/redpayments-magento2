@@ -75,7 +75,16 @@ class Redirect extends Controller
                         $response->setRedirect($redirectUrl);
                     }else{
                         $response = $this->getResponse();
-                        $response->setRedirect($redirectUrl);
+                        $wechatWebUrl = '';
+                        if ($this->redpayPayHelper->getIsDev()) {
+                            $wechatWebUrl = 'https://dev-web.redpayments.com.au/';
+                        } else {
+                            $wechatWebUrl = 'https://web.redpayments.com.au/';
+                        }
+                        $wechatWebUrl = $wechatWebUrl . '?mchNo=' . $this->redpayPayHelper->getMchNo();
+                        $wechatWebUrl = $wechatWebUrl . '&mchOrderNo=' . $order->getId();
+                        $wechatWebUrl = $wechatWebUrl. '&qrCode=' . \urlencode($redirectUrl);
+                        $response->setRedirect($wechatWebUrl);
                     }
                 }else{
                     echo 'Unsupported payment method';

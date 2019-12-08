@@ -40,9 +40,9 @@ class Notify
                 throw new \InvalidArgumentException('Receiver Data Is Error, ' . \json_last_error_msg());
             }
         }
-        if(!isset($result['sign']) || empty($result['sign'])){
-            throw new \InvalidArgumentException('Receiver Data Is Invalid');
-        }
+        // if(!isset($result['sign']) || empty($result['sign'])){
+        //     throw new \InvalidArgumentException('Receiver Data Is Invalid');
+        // }
         return $result;
     }
 
