@@ -62,9 +62,10 @@ class Gateway
             'timestamp' => time()
         );
 
-        if('Alipay' === $pay_method){
-            $data['params'] = '{"referUrl":"https://magento2.test"}';
-        }
+        // testing code.
+        // if('Alipay' === $pay_method){
+        //     $data['params'] = '{"referUrl":"https://magento2.test"}';
+        // }
         
         $result = $this->request->post(self::createUrl($this->isDev), $data);
         
